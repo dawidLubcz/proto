@@ -19,16 +19,17 @@ $(PYTHON_PROTO_PATH)%_pb2.py : $(PROTO_PATH)%.proto
 install:
 	$(PYTHON) -m pip install -r requirements.txt
 
-run_server:
-	$(PYTHON) ./python/server.py
+write:
+	$(PYTHON) ./python/write_basic.py ./python/addressbookfile
 
-run_client:
-	$(PYTHON) ./python/server.py
+read:
+	$(PYTHON) ./python/read_basic.py ./python/addressbookfile
 
 clean:
 	rm -rf ./python/__pycache__
+	rm -f ./python/addressbookfile
 
 all: python
 
 .DEFAULT_GOAL=all
-.PHONY: install run_server run_client clean
+.PHONY: install write read clean

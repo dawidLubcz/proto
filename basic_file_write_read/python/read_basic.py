@@ -4,7 +4,7 @@
 Based on: https://developers.google.com/protocol-buffers/docs/pythontutorial
 """
 
-import addressbook_pb2
+import proto.addressbook_pb2 as addressbook_pb2
 import sys
 
 # Iterates though all people in the AddressBook and prints info about them.

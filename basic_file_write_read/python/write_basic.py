@@ -4,7 +4,8 @@
 Based on: https://developers.google.com/protocol-buffers/docs/pythontutorial
 """
 
-import addressbook_pb2
+#from basic_file_write_read.python.proto import addressbook_pb2
+import proto.addressbook_pb2 as addressbook_pb2
 import sys
 
 # This function fills in a Person message based on user input.
