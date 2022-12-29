@@ -2,9 +2,8 @@ syntax = "proto2";
 
 package helloworld;
 
-// The greeting service definition
+// The Hello service definition
 service Hello {
-  // Sends a greeting
   rpc SayHello (HelloRequest) returns (HelloReply);
 }
 
@@ -13,7 +12,7 @@ message HelloRequest {
   required string name = 1;
 }
 
-// The response message containing the greetings
+// The response message
 message HelloReply {
   required string message = 1;
 }
