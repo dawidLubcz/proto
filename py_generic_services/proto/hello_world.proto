@@ -1,0 +1,20 @@
+syntax = "proto2";
+
+package helloworld;
+option py_generic_services = true;
+
+// The Hello service definition
+service HelloService {
+  rpc SayHello (HelloRequest) returns (HelloReply);
+}
+
+// The request message containing the user's name
+message HelloRequest {
+  required uint32 id = 1;
+  required string name = 2;
+}
+
+// The response message
+message HelloReply {
+  required string message = 1;
+}
