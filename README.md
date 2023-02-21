@@ -18,7 +18,7 @@ Client / server basic app with simple proto service.
 Used to measure python proto performance.
 
 1. Client sends encoded messages to the server.
-2. Server listens to incoming data on the socket end and expects to 8-bit message size first and the message itself next (DataReceiver).
+2. Server listens to incoming data on the socket and expects to 8-bit message size first and the message itself next (DataReceiver).
 3. Raw data is parsed to the protocol request and passed to the service using the protocol method descriptor (method index is hardcoded).
 The response is built (HelloIncomingRpcHandler).
 4. Service handles the message and call response callback (HelloService).
